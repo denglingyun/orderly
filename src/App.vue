@@ -151,11 +151,11 @@ export default {
     // }
     // this.wxInit();
     
-    let message = localStorage.getItem("message");
-    let flag = localStorage.getItem("flag");
-    if(!!flag && flag == 1){
+    let message = localStorage.getItem("orderlyMessage");
+    // let flag = localStorage.getItem("flag");
+    // if(!!flag && flag == 1){
       if(!!message){
-        let messages = JSON.parse(localStorage.getItem("message"));
+        let messages = JSON.parse(localStorage.getItem("orderlyMessage"));
         this.$api.isLogin({id:messages.id}).then(res => {
           if(res.data.code==200){
               let d = res.data.data;
@@ -178,25 +178,11 @@ export default {
         this.$router.push({name:'Login'});
         this.$store.commit('setExit', "");
       }
-    }else if(!!flag && flag == 2){
-      let tgMess = JSON.parse(localStorage.getItem("tgMess"));
-      this.$api.tgLogin(tgMess).then(res => {
-        if(res.data.code == 200){
-          this.$store.commit('setExit', "退出");
-          localStorage.setItem("messScore",JSON.stringify(res.data.data));
-          this.$router.push({name:'Message'});
-        }else{
-          this.$router.push({name:'Login'});
-          this.$store.commit('setExit', "");
-        }
-      }).catch(e => {
-          this.$router.push({name:'Login'});
-          this.$store.commit('setExit', "");
-      })
-    }else{
-      this.$router.push({name:'Login'});
-      this.$store.commit('setExit', "");
-    }
+    // }
+    // else{
+    //   this.$router.push({name:'Login'});
+    //   this.$store.commit('setExit', "");
+    // }
     
   }
 }

@@ -6,29 +6,29 @@
             </div> -->
 
 
-            <!-- <van-form @submit="onSubmit" >
-                        <van-field
-                                v-model="names"
-                                label="姓名"
-                                placeholder="请输入姓名"
-                                style="margin-top:15px"
-                                :rules="[{ required: true, message: '请填写姓名' }]"
-                        />
-                        <van-field
-                                v-model="id"
-                                
-                                label="身份证号"
-                                placeholder="请输入身份证号"
-                                style="margin-top:15px"
-                                :rules="[{ required: true, message: '请填写身份证号' }]"
-                        />
+            <van-form @submit="onSubmit" >
+                <van-field
+                        v-model="names"
+                        label="姓名"
+                        placeholder="请输入姓名"
+                        style="margin-top:15px"
+                        :rules="[{ required: true, message: '请填写姓名' }]"
+                />
+                <van-field
+                        v-model="id"
+                        
+                        label="身份证号"
+                        placeholder="请输入身份证号"
+                        style="margin-top:15px"
+                        :rules="[{ required: true, message: '请填写身份证号' }]"
+                />
 
-                   
-                        <div style="margin: 16px;">
-                            <van-button block  :loading="loading" class="sub-van" native-type="submit" loading-text="正在提交...">提 交</van-button>
-                        </div>
+            
+                <div style="margin: 16px;">
+                    <van-button block  :loading="loading" class="sub-van" native-type="submit" loading-text="正在提交...">提 交</van-button>
+                </div>
                     
-                    </van-form> -->
+             </van-form>
 
                     
                      <!-- <van-field
@@ -84,7 +84,7 @@
                                 <van-button size="small" @click="setTime" :disabled="disabled" class="sub-van">{{smsTitle}}</van-button>
                             </template>
                         </van-field> -->
-            <van-tabs type="card" color="#33CC99" style="padding-top:35px;">
+            <!-- <van-tabs type="card" color="#33CC99" style="padding-top:35px;">
                 <van-tab title="国编查询">
                     <van-form @submit="onSubmit" style="padding-top:30px;">
                         <van-field
@@ -137,7 +137,7 @@
                     
                     </van-form>
                 </van-tab>
-            </van-tabs>
+            </van-tabs> -->
             
             <van-divider
             :style="{ color: '#33CC99', borderColor: '#33CC99', padding: '10px 20px' }">
@@ -224,16 +224,16 @@
                     if(res.data.code==200){
                         let d = res.data.data;
                         // localStorage.setItem("accessToken",d.token.accessToken);
-                        localStorage.setItem("flag",'1');
-                        localStorage.setItem("score",JSON.stringify(d));
-                        localStorage.setItem("message",JSON.stringify({id:this.id,name:this.names}));
+                        // localStorage.setItem("flag",'1');
+                        localStorage.setItem("orderlyscore",JSON.stringify(d));
+                        localStorage.setItem("orderlyMessage",JSON.stringify({id:this.id,name:this.names}));
                         this.$api.isLogin({id:this.id}).then(res => {
                             if(res.data.code==200){
                                 let d = res.data.data;
                                 if(d.is_bind == 1){
-                                    localStorage.setItem("rank",JSON.stringify(d.rank));
+                                    localStorage.setItem("orderlyRank",JSON.stringify(d.rank));
                                 }else{
-                                    localStorage.setItem("rank",JSON.stringify([]));
+                                    localStorage.setItem("orderlyRank",JSON.stringify([]));
                                 }
                             }
                             this.$router.push({name:'Detail'});

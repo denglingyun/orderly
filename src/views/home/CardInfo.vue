@@ -292,10 +292,10 @@ export default {
     },
     created() {
         this.$store.commit('setPageTitle', "查询结果");
-        this.arrs = JSON.parse(localStorage.score)
-        this.message = JSON.parse(localStorage.message)
-        if(!!localStorage.rank){
-            this.rank = JSON.parse(localStorage.rank)
+        this.arrs = JSON.parse(localStorage.orderlyscore)
+        this.message = JSON.parse(localStorage.orderlyMessage)
+        if(!!localStorage.orderlyRank){
+            this.rank = JSON.parse(localStorage.orderlyRank)
         }
         
         if(this.rank.length > 0){
