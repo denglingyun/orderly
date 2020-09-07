@@ -8,7 +8,7 @@
         <div>
             <van-row>
                 <van-col span="12">
-                    <div class="colName">姓名</div>
+                    <div class="colName">姓名:</div>
                     <div class="colAmount">{{arrs.name}}</div>
                 </van-col>
                 <van-col span="12">
