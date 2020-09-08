@@ -44,19 +44,21 @@
                 <van-grid-item class="color1" :text="arrs.level" />
                 <van-grid-item text="专业" />
                 <van-grid-item class="color1" :text="`${arrs.major}`" />
-                <van-grid-item text="教育综合考号" />
+                <van-grid-item text="行政职业能力测验考号" />
                 <van-grid-item class="color1" :text="arrs.jyzh_num" />
-                <van-grid-item text="教育综合知识成绩" />
+                <van-grid-item text="行政职业能力测验成绩" />
                 <van-grid-item class="color1" :text="arrs.jyzh_score" />
-                <van-grid-item text="学科专业知识考号" />
+                <van-grid-item text="申论考号" />
                 <van-grid-item class="color1" :text="arrs.xkzy_num" />
-                <van-grid-item text="学科专业知识成绩" />
+                <van-grid-item text="申论成绩" />
                 <van-grid-item class="color1" :text="arrs.xkzy_score" />
-                <van-grid-item text="幼儿教育综合考号" />
+                <van-grid-item text="公安专业知识/外语专业知识考号" />
                 <van-grid-item class="color1" :text="arrs.yejy_num" />
-                <van-grid-item text="幼儿教育知识成绩" />
+                <van-grid-item text="公安专业知识成绩" />
                 <van-grid-item class="color1" :text="arrs.yejy_score" />
-                <van-grid-item text="岗位代码" />
+                <van-grid-item text="外语专业知识成绩" />
+                <van-grid-item class="color1" :text="arrs.yejy_score" />
+                <van-grid-item text="职位代码" />
                 <van-grid-item class="color1" :text="arrs.job_num" />
                 <!-- <van-grid-item text="岗位名称" v-if="arrs.is_enter != 2"/>
                 <van-grid-item v-if="arrs.is_enter != 2" class="color1" :text="`${arrs.job_info[0].school} ${arrs.job_info[0].job_name} `" /> -->

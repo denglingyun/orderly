@@ -8,19 +8,22 @@
 
             <van-form @submit="onSubmit" >
                 <van-field
-                        v-model="names"
-                        label="姓名"
-                        placeholder="请输入姓名"
-                        style="margin-top:15px"
-                        :rules="[{ required: true, message: '请填写姓名' }]"
+                    colon=true
+                    label-align='center'
+                    v-model="names"
+                    label="行政职业能力测验考号"
+                    placeholder="请输入行政职业能力测验考号"
+                    style="margin-top:15px"
+                    :rules="[{ required: true, message: '请填写行政职业能力测验考号' }]"
                 />
                 <van-field
-                        v-model="id"
-                        
-                        label="身份证号"
-                        placeholder="请输入身份证号"
-                        style="margin-top:15px"
-                        :rules="[{ required: true, message: '请填写身份证号' }]"
+                    colon=true
+                    label-align='center'
+                    v-model="id"
+                    label="身份证号"
+                    placeholder="请输入身份证号"
+                    style="margin-top:15px"
+                    :rules="[{ required: true, message: '请填写身份证号' }]"
                 />
 
             
